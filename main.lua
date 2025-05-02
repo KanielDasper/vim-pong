@@ -1,9 +1,11 @@
 require("player")
 require("ball")
 require("ai")
+require("background")
 
 -- Game state
 function love.load()
+	Background:load()
 	Player:load()
 	Ball:load()
 	AI:load()
@@ -16,6 +18,7 @@ function love.update(dt)
 end
 
 function love.draw()
+	Background:draw()
 	Player:draw()
 	Ball:draw()
 	AI:draw()
